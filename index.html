@@ -10,9 +10,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Ashish Portfolio</title>
+    <script src="app.js" defer></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCKRj5WRe28z-shfJ5J0wVGoA2dMXekVug",
+          authDomain: "portfolio-d58ea.firebaseapp.com",
+          projectId: "portfolio-d58ea",
+          storageBucket: "portfolio-d58ea.appspot.com",
+          messagingSenderId: "912912115677",
+          appId: "1:912912115677:web:fa7632a2a3ab65ddfa7834",
+          measurementId: "G-SQ0SHW880S"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TWK5ZP77QW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -132,7 +155,7 @@
                         <p class="text-gray-600">Category: Vanilla Javascript</p>
                     </div>
                 </a>
-                <a href="#" class="portfolio-card bg-white shadow-lg rounded-lg overflow-hidden">
+                <a href="https://admin-sona.onrender.com" class="portfolio-card bg-white shadow-lg rounded-lg overflow-hidden">
                     <img src="assets/imgs/dashboard.png" class="w-full" alt="Dashboard">
                     <div class="p-6">
                         <h4 class="text-xl font-semibold">Dashboard</h4>
