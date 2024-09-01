@@ -4,454 +4,167 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="description" content="Start your development with landing page.">
     <meta name="author" content="Devcrud">
-    <title>Developer Landing Page</title>
-    <!-- font icons -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Bootstrap + Meyawo main styles -->
-    <link rel="stylesheet" href="assets/css/portfolio.css">
+    <title>Ashish Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
     <!-- Page Navbar -->
-    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
-        <div class="container" >
-            <div style="display: flex; gap: 10px;">
-                <img src="assets/imgs/code.png" alt="" style="width: 30px;height: 30px;">
-                <a class="logo" href="#">Developer</a>
+    <nav class="bg-white shadow fixed w-full z-10 top-0">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center gap-4">
+                <img src="assets/imgs/code.png" alt="" class="w-8 h-8">
+                <a class="text-2xl font-bold text-gray-800" href="#">Ashish Rahi</a>
             </div>
-            <ul class="nav">
-                <li class="item">
-                    <a class="link" href="#home">Home</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#about">About</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#testmonial">Testmonial</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#blog">Blog</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#contact">Contact</a>
-                </li>
-                <li class="item ml-md-3">
-                    <!-- <a href="components.html" class="btn btn-primary">Components</a> -->
-                </li>
+            <ul class="hidden md:flex space-x-6">
+                <li><a class="text-gray-600 hover:text-blue-500" href="#home">Home</a></li>
+                <li><a class="text-gray-600 hover:text-blue-500" href="#about">About</a></li>
+                <li><a class="text-gray-600 hover:text-blue-500" href="#portfolio">Portfolio</a></li>
+                <li><a class="text-gray-600 hover:text-blue-500" href="#service">Skill</a></li>
+                <li><a class="text-gray-600 hover:text-blue-500" href="#blog">Blog</a></li>
+                <li><a class="text-gray-600 hover:text-blue-500" href="#contact">Contact</a></li>
             </ul>
-            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
-                <div class="hamburger-box">
-                    <div class="hamburger-inner"></div>
-                </div>
-            </a>
-        </div>
-    </nav><!-- End of Page Navbar -->
-
-    <!-- page header -->
-    <header id="home" class="header">
-        <div class="overlay"></div>
-        <div class="header-content container">
-            <h1 class="header-title">
-                <span class="up">HI!</span>
-                <span class="down">I am AAshish Rahi</span>
-            </h1>
-            <p class="header-subtitle"> WEB Developer</p>
-
-            <button  href="#portfolio" class="btn btn-primary">Visit My Works
-                
+            <button id="nav-toggle" class="block md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
             </button>
         </div>
-    </header><!-- end of page header -->
+    </nav>
 
-    <!-- about section -->
-    <section class="section pt-0" id="about">
-        <!-- container -->
-        <div class="container text-center">
-            <!-- about wrapper -->
-            <div class="about">
-                <div class="about-img-holder">
-                    <img src="assets/imgs/ashish1.png" style="width: 200px;border-radius: 40%;" class="about-img" 
-                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+    <!-- Page Header -->
+    <header id="home" class="bg-cover bg-center h-screen" style="background-image: url('./assets/imgs/header.jpg');height: 500px">
+        <div class="overlay bg-black bg-opacity-50 h-full flex items-center">
+            <div class="container mx-auto text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold">
+                    <span class="block">HI!</span>
+                    <span class="block mt-2">I am Ashish Rahi</span>
+                </h1>
+                <p class="mt-4 text-xl">WEB Developer</p>
+                <a href="#portfolio" class="mt-6 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                    Visit My Works
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto text-center">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                    <img src="assets/imgs/ashish1.png" class="w-48 h-48 mx-auto rounded-full" alt="Ashish Rahi">
                 </div>
-                <div class="about-caption">
-                    <p class="section-subtitle">Who Am I ?</p>
-                    <h2 class="section-title mb-3">About Me</h2>
-                    <p>
+                <div class="w-full md:w-2/3">
+                    <p class="text-lg text-gray-600">Who Am I ?</p>
+                    <h2 class="text-4xl font-bold mb-4">About Me</h2>
+                    <p class="text-gray-700 leading-relaxed">
                         As a dedicated web developer with a robust skill set in both frontend and backend technologies, I create comprehensive digital solutions that cater to all your needs. From crafting engaging, responsive user interfaces with React and Material-UI to developing scalable backend systems with Express.js, I bring a full-stack approach to every project. My goal is to build seamless, efficient applications that provide a smooth user experience while ensuring solid performance and reliability. Whether you need a dynamic website or a complex application with intricate backend functionality, I’m committed to delivering high-quality, tailored solutions that align with your vision.
                     </p>
                     <a href="/assets/resume/Ashish_Rahi_Resume.pdf" download>
-                    <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
-                </a>
-                </div>
-            </div><!-- end of about wrapper -->
-        </div><!-- end of container -->
-    </section> <!-- end of about section -->
-
-    <!-- service section -->
-    <section class="section" id="service">
-        <div class="container text-center">
-            <p class="section-subtitle">What I Have ?</p>
-            <h6 class="section-title mb-6">Skills</h6>
-            <!-- row -->
-            <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/pencil-case.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">HTML & CSS</h6>
-                            <p class="subtitle">HyperText Markup Language (HTML) is the standard markup language for creating web pages.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/responsive.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">JavaScript</h6>
-                            <p class="subtitle">Material-UI,Tailwind</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/toolbox.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">UI Framework</h6>
-                            <p class="subtitle">Material-UI,Tailwind</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/analytics.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title" >Framwork & Library</h6>
-                            <p class="subtitle">Reactjs, Nodejs,Expressjs</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3" style="margin-top: 10px;">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/analytics.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">Databases</h6>
-                            <p class="subtitle">MongoDB and SQL</p>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- end of row -->
-        </div>
-    </section><!-- end of service section -->
-
-    <!-- portfolio section -->
-    <section class="section" id="portfolio">
-        <div class="container text-center">
-            <p class="section-subtitle">What I Did ?</p>
-            <h6 class="section-title mb-6">Portfolio</h6>
-            <!-- row -->
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img src="assets/imgs/folio-1.jpg" class="portfolio-card-img"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Portfolio Website</h5>
-                                    <p class="font-weight-normal">Category:Vanila Javascript</p>
-                            </span>
-                        </span>
+                        <button class="mt-6 bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-bold py-2 px-4 rounded-full">
+                            Download CV
+                        </button>
                     </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/imgs/folio-2.jpg" class="img-responsive rounded"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Dashboard</h5>
-                                    <p class="font-weight-normal">Category: ReactJs with Expressjs,MongoDB</p>
-                            </span>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/imgs/folio-3.jpg" class="img-responsive rounded"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Web Designing</h5>
-                                    <p class="font-weight-normal">Category:Portfolio Site</p>
-                            </span>
-                        </span>
-                    </a>
-                </div>
-            </div><!-- end of row -->
-        </div><!-- end of container -->
-    </section> <!-- end of portfolio section -->
-
-    <!-- pricing section -->
-    <section class="section" id="pricing">
-        <div class="container text-center">
-            <!-- <p class="section-subtitle">How Much I Charge ?</p>
-            <h6 class="section-title mb-6">My Pricing</h6> -->
-            <!-- row -->
-            <!-- <div class="pricing-wrapper">
-                <div class="pricing-card">
-                    <div class="pricing-card-header">
-                        <img class="pricing-card-icon" src="assets/imgs/scooter.svg"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                    </div>
-                    <div class="pricing-card-body">
-                        <h6 class="pricing-card-title">Free</h6>
-                        <div class="pricing-card-list">
-                            <p>accusamus reprehenderit</p>
-                            <p>provident dolorem </p>
-                            <p>quos neque</p>
-                            <p>fugiat quibusdam</p>
-                            <p><i class="ti-close"></i></p>
-                            <p><i class="ti-close"></i></p>
-                        </div>
-                    </div>
-                    <div class="pricing-card-footer">
-                        <span>$</span>
-                        <span>0.00/Month</span>
-                    </div>
-                    <a href="#" class="btn btn-primary mt-3 pricing-card-btn">Subscribe</a>
-                </div>
-                <div class="pricing-card">
-                    <div class="pricing-card-header">
-                        <img class="pricing-card-icon" src="assets/imgs/shipped.svg"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                    </div>
-                    <div class="pricing-card-body">
-                        <h6 class="pricing-card-title">Basic</h6>
-                        <div class="pricing-card-list">
-                            <p>accusamus reprehenderit</p>
-                            <p>provident dolorem </p>
-                            <p>quos neque</p>
-                            <p>fugiat quibusdam</p>
-                            <p>accusamus laboriosam</p>
-                            <p><i class="ti-close"></i></p>
-                        </div>
-                    </div>
-                    <div class="pricing-card-footer">
-                        <span>$</span>
-                        <span>9.99/Month</span>
-                    </div>
-                    <a href="#" class="btn btn-primary mt-3 pricing-card-btn">Subscribe</a>
-                </div>
-                <div class="pricing-card">
-                    <div class="pricing-card-header">
-                        <img class="pricing-card-icon" src="assets/imgs/startup.svg"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                    </div>
-                    <div class="pricing-card-body">
-                        <h6 class="pricing-card-title">Premium</h6>
-                        <div class="pricing-card-list">
-                            <p>accusamus reprehenderit</p>
-                            <p>provident dolorem </p>
-                            <p>quos neque</p>
-                            <p>fugiat quibusdam</p>
-                            <p>accusamus laboriosam</p>
-                            <p>inventore omnis</p>
-                        </div>
-                    </div>
-                    <div class="pricing-card-footer">
-                        <span>$</span>
-                        <span>99.9/Month</span>
-                    </div>
-                    <a href="#" class="btn btn-primary mt-3 pricing-card-btn">Subscribe</a>
-                </div>
-
-            </div> -->
-            <!-- end of pricing wrapper -->
-        </div> <!-- end of container -->
-    </section><!-- end of pricing section -->
-
-    <!-- section -->
-    <section class="section-sm bg-primary">
-        <!-- container -->
-        <div class="container text-center text-sm-left">
-            <!-- row -->
-            <div class="row align-items-center">
-                <div class="col-sm offset-md-1 mb-4 mb-md-0">
-                    <h6 class="title text-light">Want to work with me?</h6>
-                    <p class="m-0 text-light">Always feel Free to Contact & Hire me</p>
-                </div>
-                <div class="col-sm offset-sm-2 offset-md-3">
-                    <button class="btn btn-lg my-font btn-light rounded">Hire Me</button>
-                </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </section> <!-- end of section -->
-
-    <!-- testimonial section -->
-    <section class="section" id="testmonial">
-        <div class="container text-center">
-            <p class="section-subtitle">What Think Client About Me ?</p>
-            <h6 class="section-title mb-6">Testmonial</h6>
-
-            <!-- row -->
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <div class="testimonial-card-img-holder">
-                            <img src="assets/imgs/avatar2.jpg" class="testimonial-card-img"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                        </div>
-                        <div class="testimonial-card-body">
-                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis
-                                adipisci nihil.</p>
-                            <h6 class="testimonial-card-title">Emily Reb</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <div class="testimonial-card-img-holder">
-                            <img src="assets/imgs/avatar3.jpg" class="testimonial-card-img"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                        </div>
-                        <div class="testimonial-card-body">
-                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis
-                                adipisci nihil.</p>
-                            <h6 class="testimonial-card-title">Emily Reb</h6>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div> <!-- end of container -->
-    </section> <!-- end of testimonial section -->
-
-    <!-- blog section -->
-    <section class="section" id="blog">
-        <!-- container -->
-        <div class="container text-center">
-            <p class="section-subtitle">Recent Posts of Dev Community?</p>
-            <h6 class="section-title mb-6"><img src="/assets/imgs/dev-black.png" alt="" style="border-radius: 80%;width:3%;gap:'10px'"></a>Blog</h6>
-            <!-- blog-wrapper -->
-            <div class="blog-card">
-                <div class="blog-card-header">
-                    <img src="assets/imgs/img-1.jpg" class="blog-card-img"
-                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                </div>
-                <div class="blog-card-body">
-                 <a href="https://dev.to/logrocket/javascript-design-patterns-guide-3p8k">   <h5 class="blog-card-title">JavaScript design patterns guide</h6></a>
-
-                        <p class="blog-card-caption">
-                            <a href="https://dev.to/logrocket/javascript-design-patterns-guide-3p8k">By:Dev Community</a>
-                            <!-- <a href="#"><i class="ti-heart text-danger"></i> 234</a> -->
-                            <!-- <a href="#"><i class="ti-comment"></i> 123</a> -->
-                        </p>
-                        <p>Imagine a situation where a group of architects wants to design a skyscraper. During the design stage, they would have to consider a plethora of factors, for example:
-
-                            The architectural style — should the building be brutalist, minimalist, or something else?
-                            The width of the base — what sizing is needed to prevent collapse during windy days?
-                            Protection against natural disasters — what preventative structural measures need to be in place based on the location of this building to prevent damage from earthquakes, flooding, etc.?.</p>
-
-                       
-
-                        <a href="https://dev.to/logrocket/javascript-design-patterns-guide-3p8k" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
-                </div>
-            </div><!-- end of blog wrapper -->
-
-            <!-- blog-wrapper -->
-            <div class="blog-card">
-                <div class="blog-card-header">
-                    <img src="assets/imgs/img-2.jpg" class="blog-card-img"
-                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                </div>
-                <div class="blog-card-body">
-                    <h5 class="blog-card-title">101 React Tips & Tricks For Beginners To Experts</h6>
-
-                        <p class="blog-card-caption">
-                            <a href="#">By: Admin</a>
-                            <a href="#"><i class="ti-heart text-danger"></i> 456</a>
-                            <a href="#"><i class="ti-comment"></i> 264</a>
-                        </p>
-
-                        <p>This guide assumes a basic familiarity with React and an understanding of the terms props, state, context, etc.
-                            I tried to use Vanilla JS for most of the examples to keep things simple. If you're using TypeScript, you can easily adapt the code.
-                            The code is not production-ready. Use at your own discretion.</p>
-
-                        <a href="https://dev.to/_ndeyefatoudiop/101-react-tips-tricks-for-beginners-to-experts-4m11" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
-                </div>
-            </div><!-- end of blog wrapper -->
-
-        </div><!-- end of container -->
+        </div>
     </section>
 
-    <!-- contact section -->
-    <section class="section" id="contact">
-        <div class="container text-center">
-            <p class="section-subtitle">How can you communicate?</p>
-            <h6 class="section-title mb-5">Contact Me</h6>
-            <!-- contact form -->
-            <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
-                <div class="form-row">
-                    <div class="form-group col-sm-6">
-                        <input type="text" size="50" class="form-control" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group col-sm-6">
-                        <input type="email" class="form-control" placeholder="Enter Email" requried>
-                    </div>
-                    <div class="form-group col-sm-12">
-                        <textarea name="comment" id="comment" rows="6" class="form-control"
-                            placeholder="Write Something"></textarea>
-                    </div>
-                    <div class="form-group col-sm-12 mt-3">
-                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
-                    </div>
+    <!-- Skills Section -->
+    <section id="service" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <p class="text-lg text-gray-600">What I Have ?</p>
+            <h6 class="text-4xl font-bold mb-8">Skills</h6>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card bg-white shadow-lg p-6 rounded-lg">
+                    <img src="assets/imgs/htmlcss.png" class="w-32 mx-auto mb-4" alt="HTML, CSS & JavaScript">
+                    <h6 class="text-xl font-semibold">HTML, CSS & JAVASCRIPT</h6>
                 </div>
-            </form><!-- end of contact form -->
-        </div><!-- end of container -->
-    </section><!-- end of contact section -->
-
-    <!-- footer -->
-    <div class="container">
-        <footer class="footer">
-            <p class="mb-0">Copyright
-                <script>document.write(new Date().getFullYear())</script> &copy;
-            </p>
-            <div class="social-links text-right m-auto ml-sm-auto">
-                <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
+                <div class="service-card bg-white shadow-lg p-6 rounded-lg">
+                    <img src="assets/imgs/Mern.png" class="w-32 mx-auto mb-4" alt="MERN Framework">
+                    <h6 class="text-xl font-semibold">MERN Framework</h6>
+                    <p class="text-gray-600">ReactJs, ExpressJs, Nodejs, MongoDB</p>
+                </div>
+                <div class="service-card bg-white shadow-lg p-6 rounded-lg">
+                    <img src="assets/imgs/databases.png" class="w-32 mx-auto mb-4" alt="Databases">
+                    <h6 class="text-xl font-semibold">Databases</h6>
+                    <p class="text-gray-600">MongoDB, Redis & SQL</p>
+                </div>
+                <div class="service-card bg-white shadow-lg p-6 rounded-lg">
+                    <img src="assets/imgs/utilities.png" class="w-12 mx-auto mb-4" alt="Services">
+                    <h6 class="text-xl font-semibold">Services</h6>
+                    <p class="text-gray-600">Socket.io, Kafka</p>
+                </div>
             </div>
-        </footer>
-    </div> <!-- end of page footer -->
+        </div>
+    </section>
 
-    <!-- core  -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16">
+        <div class="container mx-auto text-center">
+            <p class="text-lg text-gray-600">What I Did ?</p>
+            <h6 class="text-4xl font-bold mb-8">Portfolio</h6>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a href="#" class="portfolio-card bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="assets/imgs/portfolio.png" class="w-full" alt="Portfolio Website">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold">Portfolio Website</h4>
+                        <p class="text-gray-600">Category: Vanilla Javascript</p>
+                    </div>
+                </a>
+                <a href="#" class="portfolio-card bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="assets/imgs/dashboard.png" class="w-full" alt="Dashboard">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold">Dashboard</h4>
+                        <p class="text-gray-600">Purpose: Digitization of Jewellery Shop</p>
+                        <p class="text-gray-600">Tech Stack: ReactJs, React Query</p>
+                    </div>
+                </a>
+                <a href="#" class="portfolio-card bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="assets/imgs/folio-3.jpg" class="w-full" alt="Web Designing">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold">Web Designing</h4>
+                        <p class="text-gray-600">Category: Portfolio Site</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <!-- bootstrap 3 affix -->
-    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <p class="text-lg text-gray-600">Contact Me</p>
+            <h6 class="text-4xl font-bold mb-8">Get in Touch</h6>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <form  method="POST" class="bg-white shadow-lg p-6 rounded-lg">
+                    <input type="text" name="name" placeholder="Your Name" class="w-full mb-4 p-3 border rounded focus:outline-none">
+                    <input type="email" name="email" placeholder="Your Email" class="w-full mb-4 p-3 border rounded focus:outline-none">
+                    <textarea name="message" rows="5" placeholder="Your Message" class="w-full mb-4 p-3 border rounded focus:outline-none"></textarea>
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                        Send Message
+                    </button>
+                </form>
+                <div class="flex flex-col justify-center">
+                    <p class="text-gray-700 mb-4"><strong>Email:</strong> ashish.rahi@example.com</p>
+                    <p class="text-gray-700 mb-4"><strong>Phone:</strong> +1 234 567 890</p>
+                    <p class="text-gray-700"><strong>Address:</strong> 1234 Street Name, City, Country</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Meyawo js -->
-    <script src="assets/js/meyawo.js"></script>
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-800 text-white text-center">
+        <p>&copy; 2024 Ashish Rahi. All Rights Reserved.</p>
+    </footer>
 
 </body>
 
