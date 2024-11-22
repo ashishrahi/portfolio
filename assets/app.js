@@ -1,27 +1,8 @@
 // app.js
+import { apiEndpoints, fetchData } from './config/config';
 
 document.addEventListener('DOMContentLoaded', function() {
-    // API Endpoints
-    const apiEndpoints = {
-        about: 'https://api.example.com/about',
-        skills: 'https://api.example.com/skills',
-        portfolio: 'https://api.example.com/portfolio',
-        contact: 'https://api.example.com/contact'
-    };
-
     // Fetch and display data for each section
-    async function fetchData(endpoint) {
-        try {
-            const response = await fetch(endpoint);
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return await response.json();
-        } catch (error) {
-            console.error('There was a problem with the fetch operation:', error);
-        }
-    }
-
     async function updateSections() {
         // Fetch data for each section
         const [aboutData, skillsData, portfolioData, contactData] = await Promise.all([
@@ -66,19 +47,20 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateSkillsSection(data) {
         const skillsSection = document.getElementById('service');
         skillsSection.innerHTML = `
-            <div class="container mx-auto text-center">
-                <p class="text-lg text-gray-600">${data.subtitle}</p>
-                <h6 class="text-4xl font-bold mb-8">${data.title}</h6>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    ${data.skills.map(skill => `
+         <div class="container mx-auto text-center">
+            <p class="text-lg text-gray-600">What I Have ?</p>
+            <h6 class="text-4xl font-bold mb-8">Skills</h6>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                 ${data.skills.map(skill => `
                         <div class="service-card bg-white shadow-lg p-6 rounded-lg">
                             <img src="${skill.image}" class="w-32 mx-auto mb-4" alt="${skill.name}">
                             <h6 class="text-xl font-semibold">${skill.name}</h6>
                             <p class="text-gray-600">${skill.description}</p>
                         </div>
                     `).join('')}
-                </div>
-            </div>
+               </div>
+        </div>
+
         `;
     }
 

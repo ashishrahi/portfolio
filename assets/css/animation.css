@@ -1,0 +1,172 @@
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradientShift 5s ease infinite;
+}
+
+
+
+.typing-container {
+    display: inline-block;
+    position: relative;
+}
+
+.typing-effect {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 10ch; /* Adjust this based on your desired text length */
+    border-right: 4px solid #fff; /* Cursor effect */
+    animation: typing  1s forwards, 
+              jumpText 4s ease-in-out infinite, /* Jumping effect */
+              colorChange 4s infinite alternate; /* Color change effect */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes jumpText {
+    0% {
+        transform: translateY(0); /* Start at normal position */
+    }
+    25% {
+        transform: translateY(-10px); /* Jump up */
+    }
+    50% {
+        transform: translateY(0); /* Back to normal */
+    }
+    75% {
+        transform: translateY(-10px); /* Jump up again */
+    }
+    100% {
+        transform: translateY(0); /* Settle back to normal */
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #fff; /* Start with white */
+    }
+    50% {
+        color: #ff6347; /* Change to tomato color */
+    }
+    100% {
+        color: #32cd32; /* Change to lime green */
+    }
+}
+
+
+
+/* Keyframes for typing animation */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Apply typing animation with left-to-right direction */
+.typing-animation {
+    display: inline-block;
+    white-space: normal; /* Allow text to wrap onto the next line */
+    word-wrap: break-word; /* Allow words to break and wrap to the next line */
+    overflow: hidden;
+    width: 0;
+    direction: ltr; /* Ensure left-to-right text direction */
+    animation: typing 5s steps(80) 1s forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.typing-animation::after {
+    content: '|';
+    border-right: 2px solid black;
+    margin-left: 2px;
+}
+
+
+
+.download-btn {
+    background: linear-gradient(90deg, #4caf50, #2196f3, #ff5722, #e91e63);
+    background-size: 400% 400%;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    animation: gradient-shift 5s ease infinite;
+    transition: transform 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Contact */
+/* Keyframes for bounce animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Mail icon animation */
+.email-icon {
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.email-link:hover .email-icon {
+    animation: bounce 0.6s infinite;
+    color: #2563eb; /* Tailwind's blue-600 color */
+}
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+[
+    {
+      "title": "HTML, CSS & JAVASCRIPT",
+      "image": "assets/imgs/htmlcss.png",
+      "description": "Core Programing Concept",
+      "alt": "HTML, CSS & JavaScript"
+    },
+    {
+      "title": "MERN Framework",
+      "image": "assets/imgs/Mern.png",
+      "description": "ReactJs, ExpressJs, Nodejs, MongoDB",
+      "alt": "MERN Framework"
+    },
+    {
+      "title": "Databases",
+      "image": "assets/imgs/databases.png",
+      "description": "MongoDB, Redis & SQL",
+      "alt": "Databases"
+    },
+    {
+      "title": "Services",
+      "image": "assets/imgs/utilities.png",
+      "description": "Socket.io, Kafka",
+      "alt": "Services"
+    }
+  ]
+  
